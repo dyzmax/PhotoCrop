@@ -25,17 +25,11 @@
         || (controller == nil))
         return NO;
     
-    
     UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
-    
     cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
-    
     cameraUI.mediaTypes = @[(NSString *) kUTTypeImage];
-    
     cameraUI.allowsEditing = YES;
-    
     cameraUI.delegate = delegate;
-    
     [controller presentViewController:cameraUI animated:YES completion:nil];
     
     return YES;
